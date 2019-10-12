@@ -6,6 +6,7 @@ import androidx.room.Ignore;
 import androidx.room.PrimaryKey;
 
 import java.io.Serializable;
+import java.text.SimpleDateFormat;
 import java.util.Calendar;
 
 @Entity
@@ -72,7 +73,12 @@ public class Aluno implements Serializable {
     }
 
     public String getNomeCompleto() {
-        return  nome;
+        return nome;
+    }
+
+    public String dataFormatada() {
+        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("dd/MM/yyyy");
+        return simpleDateFormat.format(momentoDeCadastro.getTime());
     }
 
     public Calendar getMomentoDeCadastro() {
