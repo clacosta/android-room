@@ -31,7 +31,13 @@ public abstract class AgendaDatabase extends RoomDatabase {
                 }, new Migration(2, 3) {
                     @Override
                     public void migrate(@NonNull SupportSQLiteDatabase database) {
-                        database.execSQL("");
+                        // Criar nova tabela com as informações desejadas
+
+                        // Copiar dados da tabela antiga para a nova
+
+                        // Remove tabela antiga
+
+                        // Renomear a tabela nova com o nome da tabela antiga
                     }
                 })
                 .build();
