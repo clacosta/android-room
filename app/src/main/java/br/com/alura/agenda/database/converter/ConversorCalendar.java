@@ -8,7 +8,10 @@ public class ConversorCalendar {
 
     @TypeConverter
     public Long toLong(Calendar value) {
-        return value.getTimeInMillis();
+        if (value != null) {
+            return value.getTimeInMillis();
+        }
+        return null;
     }
 
     @TypeConverter
